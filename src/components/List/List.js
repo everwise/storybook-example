@@ -13,7 +13,7 @@ class List extends React.Component {
   }
   
   render() {
-    const { allPokemon, handleClick } = this.props;
+    const { allPokemon } = this.props;
 
     return (
       <section
