@@ -1,0 +1,22 @@
+.List {
+  overflow-y: scroll;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  bottom: 0;
+}
+
+.List--list {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.List--list-pokemon {
+  padding: 5px;
+  border-top: 1px solid var(--pokemon-black);
+}
+
+.List--list-pokemon:last-of-type {
+  border-bottom: 1px solid var(--pokemon-black);
+}
