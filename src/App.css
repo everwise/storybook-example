@@ -7,8 +7,21 @@
 .Pokedex--main-content {
   display: flex;
   position: fixed;
-  top: 75px;
+  top: 65px;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.Pokedex--main-content:after {
+  content: "";
+  background-image: url('/assets/img/pixel-bg.jpg');
+  background-size: cover;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
