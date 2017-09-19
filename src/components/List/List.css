@@ -1,11 +1,12 @@
 .List {
   overflow-y: scroll;
+  padding: 20px;
 }
 
 .List--list {
   list-style: none;
   padding: 0;
-  margin: 10px;
+  margin: 0;
 }
 
 .List--list-pokemon {

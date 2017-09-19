@@ -11,9 +11,11 @@ class Pokemon extends React.Component {
   }
 
   render() {
+    const { pokemonId } = this.props;
+
     return (
       <div>
-        Placeholder for Pokemon
+        { pokemonId }
       </div>
     );
   }

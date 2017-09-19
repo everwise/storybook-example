@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       isLoading: true,
       pokemonList: [],
-      currentPokemon: '',
+      currentPokemonId: undefined,
     };
   }
   
@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-    const { isLoading, pokemonList, currentPokemon } = this.state;
+    const { isLoading, pokemonList, currentPokemonId } = this.state;
 
     return (
       <div className="Pokedex">
@@ -35,8 +35,11 @@ class App extends Component {
         {isLoading && <main>Loading</main>}
         {!isLoading &&
           <main className="Pokedex--main-content" >
-            <List allPokemon={pokemonList} />
-            <PokemonPage pokemon={ currentPokemon } />
+            <List
+              allPokemon={pokemonList}
+              updatePokemonId={(id) => this.setState({ currentPokemonId: id })}
+            />
+            <PokemonPage pokemonId={ currentPokemonId } />
           </main>
         }
       </div>
