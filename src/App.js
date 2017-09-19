@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Header } from './components/Header';
 import { List } from './components/List';
+import { PokemonPage } from './components/Pokemon';
 
 import './App.css';
 
@@ -11,6 +12,7 @@ class App extends Component {
     this.state = {
       isLoading: true,
       pokemonList: [],
+      currentPokemon: '',
     };
   }
   
@@ -25,13 +27,18 @@ class App extends Component {
   }
 
   render() {
-    const { isLoading, pokemonList } = this.state;
+    const { isLoading, pokemonList, currentPokemon } = this.state;
 
     return (
       <div className="Pokedex">
         <Header />
-        {isLoading && <h1>Loading</h1>}
-        {!isLoading && <List allPokemon={pokemonList} />}
+        {isLoading && <main>Loading</main>}
+        {!isLoading &&
+          <main className="Pokedex--main-content" >
+            <List allPokemon={pokemonList} />
+            <PokemonPage pokemon={ currentPokemon } />
+          </main>
+        }
       </div>
     );
   }
