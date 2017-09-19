@@ -3,3 +3,12 @@
   --pokemon-black: #222224;
   --pokemon-white: #f0f0f0;
 }
+
+.Pokedex--main-content {
+  display: flex;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

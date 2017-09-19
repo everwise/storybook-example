@@ -1,9 +1,5 @@
 .List {
   overflow-y: scroll;
-  position: fixed;
-  top: 75px;
-  left: 0;
-  bottom: 0;
 }
 
 .List--list {
