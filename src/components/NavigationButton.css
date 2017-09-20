@@ -1,0 +1,28 @@
+.NavigationButton {
+  border: 0;
+  position: relative;
+  border-radius: 3px;
+  height: 50px;
+  width: 50px;
+  outline: none;
+  background-color: #f1618c;
+  cursor: pointer;
+}
+
+.NavigationButton:hover {
+  background-color: #f181ac;
+}
+
+.next:after {
+  content: ">>";
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.prev:after {
+  content: "<<";
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
