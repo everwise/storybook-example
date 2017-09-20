@@ -2,8 +2,8 @@
 This is an example repo to demonstrate [Storybook](https://storybook.js.org/), a UI development environment.
 ## Getting Started
 First, clone the repo and navigate to the folder. In the CLI, run the following commands to get up and running:
-```
-nvm use
+```bash
+nvm use 6 #create-react-app requires node version 6+
 yarn
 yarn storybook
 ```

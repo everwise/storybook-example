@@ -11,12 +11,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Oops!</h1>
-        <span>
-          Did you mean to go to
+        <div>
+          {`Did you mean to go to${' '}`}
           <a href="http://localhost:9009/">
             http://localhost:9009/
           </a>?
-        </span>
+        </div>
       </div>
     );
   }
