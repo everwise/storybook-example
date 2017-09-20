@@ -5,6 +5,7 @@
   "dependencies": {
     "@storybook/addon-knobs": "^3.2.8",
     "@storybook/react": "^3.2.8",
+    "bootstrap": "3",
     "classnames": "^2.2.5",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",
