@@ -1,12 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
-storiesOf('Button', module)
-  .add('with text', () => (
-    <button onClick={action('clicked')}>Hello Button</button>
-  ))
-  .add('with some emoji', () => (
-    <button onClick={action('clicked')}>😀 😎 👍 💯</button>
+import {
+  NavigationButton,
+} from '../src/components';
+
+storiesOf('NavigationButton', module)
+  .addDecorator(withKnobs)
+  .add('button', () => (
+    <NavigationButton
+      direction={select('direction', ['prev', 'next'], 'prev')}
+      disabled={boolean('disabled', false)}
+      onClick={action('click!')}
+    />
   ));
-  

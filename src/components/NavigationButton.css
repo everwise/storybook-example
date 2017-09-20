@@ -13,16 +13,21 @@
   background-color: #f181ac;
 }
 
-.next:after {
+.NavigationButton.next:after {
   content: ">>";
   color: white;
   font-weight: bold;
   font-size: 18px;
 }
 
-.prev:after {
+.NavigationButton.prev:after {
   content: "<<";
   color: white;
   font-weight: bold;
   font-size: 18px;
+}
+
+.NavigationButton.disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
 }

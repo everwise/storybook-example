@@ -3,9 +3,15 @@ import cn from 'classnames';
 
 import './NavigationButton.css';
 
-const NavigationButton = ({ direction, size }) => (
+const NavigationButton = ({ direction, onClick, disabled }) => (
   <button
-    className={cn(size, direction, 'NavigationButton')}
+    className={cn(
+      direction,
+      'NavigationButton',
+      { disabled }
+    )}
+    onClick={onClick}
+    disabled={disabled}
   />
 );
 
