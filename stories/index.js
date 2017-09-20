@@ -1,13 +1,12 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
-import { withKnobs, select } from '@kadira/storybook-addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 
-import { NavigationButton } from '../src/components';
-
-storiesOf('NavigationButton', module)
-  .addDecorator(withKnobs)
-  .add('to Storybook', () => (
-    <NavigationButton
-      direction={select('direction', ['next', 'prev'], 'next')}
-    />
+storiesOf('Button', module)
+  .add('with text', () => (
+    <button onClick={action('clicked')}>Hello Button</button>
+  ))
+  .add('with some emoji', () => (
+    <button onClick={action('clicked')}>😀 😎 👍 💯</button>
   ));
+  
