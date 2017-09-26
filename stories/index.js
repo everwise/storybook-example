@@ -23,7 +23,7 @@ const sizes = ['lg', 'sm', 'xs', undefined];
 
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)
-  .add('Button', () => (
+  .addWithJSX('Button', () => (
     <Button
       bsStyle={select('bsStyle', buttonStyles, 'default')}
       bsSize={select('bsSize', sizes)}
@@ -33,7 +33,7 @@ storiesOf('Buttons', module)
       {text('text', 'Submit')}
     </Button>
   ))
-  .add('ButtonGroup', () => (
+  .addWithJSX('ButtonGroup', () => (
     <ButtonGroup
       bsSize={select('bsSize', sizes)}
       vertical={boolean('vertical', false)}
@@ -44,7 +44,7 @@ storiesOf('Buttons', module)
       <Button>Right</Button>
     </ButtonGroup>
   ))
-  .add('ButtonToolbar', () => (
+  .addWithJSX('ButtonToolbar', () => (
     <ButtonToolbar>
       <ButtonGroup bsSize={select('bsSize', sizes, 'md')}>
         <Button>1</Button>
@@ -72,7 +72,7 @@ const tooltip = (
 
 storiesOf('Overlays', module)
   .addDecorator(withKnobs)
-  .add('Tooltip', () => (
+  .addWithJSX('Tooltip', () => (
     <Tooltip
       id="tooltip-1"
       placement={select('placement', placements, 'right')}
@@ -81,7 +81,7 @@ storiesOf('Overlays', module)
       {text('text', 'This is a tooltip.')}
     </Tooltip>
   ))
-  .add('with OverlayTrigger', () => (
+  .addWithJSX('with OverlayTrigger', () => (
     <OverlayTrigger
       placement={select('placement', placements, 'right')}
       overlay={tooltip}
@@ -95,7 +95,7 @@ const navStyles = ['pills', 'tabs'];
 
 storiesOf('Navs', module)
   .addDecorator(withKnobs)
-  .add('Nav', () => (
+  .addWithJSX('Nav', () => (
     <Nav
       bsStyle={select('bsStyle', navStyles, 'pills')}
       activeKey={1}
@@ -127,7 +127,7 @@ const panelStyles = ['primary', 'success', 'info', 'warning', 'danger', undefine
 
 storiesOf('Page layout', module)
   .addDecorator(withKnobs)
-  .add('Table', () => (
+  .addWithJSX('Table', () => (
     <Table
       striped={boolean('striped', false)}
       bordered={boolean('bordered', false)}
@@ -163,7 +163,7 @@ storiesOf('Page layout', module)
       </tbody>
     </Table>
   ))
-  .add('Panel', () => (
+  .addWithJSX('Panel', () => (
     <Panel
       bsStyle={select('bsStyle', panelStyles)}
       header={text('header')}
