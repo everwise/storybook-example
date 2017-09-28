@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
+import { select, boolean, text } from '@storybook/addon-knobs';
 import {
   Button,
   ButtonGroup,
@@ -22,7 +22,6 @@ const buttonStyles = ['success', 'warning', 'danger', 'info', 'default', 'primar
 const sizes = ['xs', 'sm', undefined, 'lg'];
 
 storiesOf('Buttons', module)
-  .addDecorator(withKnobs)
   .addWithJSX('Button', () => (
     <Table striped bordered>
       <thead>
@@ -92,7 +91,6 @@ const tooltip = (
 );
 
 storiesOf('Overlays', module)
-  .addDecorator(withKnobs)
   .addWithJSX('Tooltip', () => (
     <Tooltip
       id="tooltip-1"
@@ -115,7 +113,6 @@ storiesOf('Overlays', module)
 const navStyles = ['pills', 'tabs'];
 
 storiesOf('Navs', module)
-  .addDecorator(withKnobs)
   .addWithJSX('Nav', () => (
     <Nav
       bsStyle={select('bsStyle', navStyles, 'pills')}
@@ -147,7 +144,6 @@ storiesOf('Navs', module)
 const panelStyles = ['primary', 'success', 'info', 'warning', 'danger', undefined];
 
 storiesOf('Page layout', module)
-  .addDecorator(withKnobs)
   .addWithJSX('Table', () => (
     <Table
       striped={boolean('striped', false)}
