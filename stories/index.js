@@ -4,21 +4,14 @@ import { action } from '@storybook/addon-actions';
 import { select, boolean, text } from '@storybook/addon-knobs';
 import {
   Button,
-  ButtonGroup,
-  ButtonToolbar,
-  Tooltip,
-  OverlayTrigger,
-  Nav,
-  NavItem,
   Table,
-  Panel,
 } from 'react-bootstrap';
 
 // styling must be imported since react-bootstrap does not automatically include styling
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
-const buttonStyles = ['success', 'warning', 'danger', 'info', 'default', 'primary', 'link'];
+const buttonStyles = ['default', 'primary', 'success', 'info', 'warning', 'danger', 'link'];
 const sizes = ['xs', 'sm', undefined, 'lg'];
 
 storiesOf('Buttons', module)
@@ -67,7 +60,7 @@ storiesOf('Page layout', module)
           <th>#</th>
           <th>First Name</th>
           <th>Last Name</th>
-          <th>Twitter Username</th>
+          <th>Desired Superpower</th>
         </tr>
       </thead>
       <tbody>
@@ -75,18 +68,18 @@ storiesOf('Page layout', module)
           <td>1</td>
           <td>Rocky</td>
           <td>Meza</td>
-          <td>@rockymeza</td>
+          <td>Flying</td>
         </tr>
         <tr>
           <td>2</td>
           <td>Christian</td>
           <td>Cho</td>
-          <td>@nycgogi</td>
+          <td>Mind Control</td>
         </tr>
         <tr>
           <td>3</td>
           <td colSpan="2">Cooper the Dog</td>
-          <td>@cooperthedog</td>
+          <td>Eating all the things</td>
         </tr>
       </tbody>
     </Table>
