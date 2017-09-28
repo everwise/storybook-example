@@ -19,19 +19,40 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
 const buttonStyles = ['success', 'warning', 'danger', 'info', 'default', 'primary', 'link'];
-const sizes = ['lg', 'sm', 'xs', undefined];
+const sizes = ['xs', 'sm', undefined, 'lg'];
 
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)
   .addWithJSX('Button', () => (
-    <Button
-      bsStyle={select('bsStyle', buttonStyles, 'default')}
-      bsSize={select('bsSize', sizes)}
-      onClick={action('click')}
-      disabled={boolean('disabled', false)}
-    >
-      {text('text', 'Submit')}
-    </Button>
+    <Table striped bordered>
+      <thead>
+        <tr>
+          <td />
+          {buttonStyles.map(style => (
+            <th key={style}>{style}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {sizes.map(size => (
+          <tr key={size}>
+            <th>{size || '(default)'}</th>
+            {buttonStyles.map(style => (
+              <td key={style}>
+                <Button
+                  bsStyle={style}
+                  bsSize={size}
+                  onClick={action('click')}
+                  disabled={boolean('disabled', false)}
+                >
+                  {text('text', 'Submit')}
+                </Button>
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </Table>
   ))
   .addWithJSX('ButtonGroup', () => (
     <ButtonGroup
